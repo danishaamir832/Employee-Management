@@ -1,0 +1,5 @@
+package com.example.employee;
+import org.spriingframework.data.jpa.repository.JpaRepository;
+public interface EmployeeRepository extends JPaRepository<Employee, Long>{
+
+}

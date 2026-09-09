@@ -1,0 +1,19 @@
+pacakage.com.example.employee;
+import Jakarta.persistentence.Entity;
+
+@Entity
+
+public class Employee{
+
+@GeneratedValue(strategy= GenerationType.IDENTITY)
+private Long id;
+private String name;
+private String email;
+private String health;
+public Employee (String name, String email, String health){
+this.name= name;
+this.email=email;
+this.health=health;
+}
+
+// setter and getter

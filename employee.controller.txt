@@ -1,0 +1,35 @@
+package.com.example.employee;
+import java.util.List;
+@RestController
+@RequestMpping("api/employee")
+public class EmployeeController{
+
+private final EmployeeService.service;
+public EmployeeController(EmployeeService service){
+this.service= service;
+}
+@PostMapping
+public Employee createEmployee{
+(@RequestBody Employee employee){
+return service.createemployee(employee);
+}
+
+@GetMapping("/id)
+public Employee getEmployeeById(Id);
+(@PathVariable Long id){
+return service.getEmployeeById(id);
+}
+@PutMapping("{id}")
+public Employee updateEmployee{
+@pathVariable Long id,@RequestBody Employee employee){
+return service.updateEmployee(id, employee)
+}
+@DeleteMapping("/{id}")
+public ResponseEntity<String> deleteEmployee{
+(@PathVariable Long id){
+service.deleteEmployee(id);
+retrun ResponseEntity.ok("employee delete successfully");
+}
+}
+
+
